@@ -69,14 +69,14 @@ public class UTCController {
         JsonObject preresponse = new JsonObject();
         preresponse.add("response",pre);
         String response = preresponse.toString();
-        byte[] customerJsonBytes = response.getBytes();
+        byte[] responsefile = response.getBytes();
         return ResponseEntity
                 .ok()
                 .header(HttpHeaders.CONTENT_DISPOSITION, "attachment;filename=response.json")
                 .header(HttpHeaders.ACCESS_CONTROL_EXPOSE_HEADERS, HttpHeaders.CONTENT_DISPOSITION)
                 .contentType(MediaType.APPLICATION_JSON)
-                .contentLength(customerJsonBytes.length)
-                .body(customerJsonBytes);
+                .contentLength(responsefile.length)
+                .body(responsefile);
 
 
     }catch (DateTimeException e){
