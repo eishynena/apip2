@@ -63,7 +63,20 @@ Dependencias usadas:
         </dependency>
 
 
+Para ejecutar de forma local, se debe configurar en: 
 
+    "Edit Configurations" - "+" - "Maven" -  En campo "Command Line" escribir spring-boot:run
+
+Una vez realizado el paso anterior, se ejecutará el API por el puerto 8080
+
+Si se desea generar el jar, se debe configurar lo siguiente:
+   
+    "Edit Configurations" - "+" - "Maven" -  En campo "Command Line" clean compile package
+
+Si el build se realiza exitosamente, se busca el .jar dentro de la carpeta "target" del proyecto y se ejecuta con el comando
+    
+    java -jar nombredeljar.jar 
+   
 Link en la nube del API: http://djaque.prueba.mooo.com/api
 
 Ruta del servicio: /timezone-utc
